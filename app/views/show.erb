@@ -1,0 +1,13 @@
+<h1>Welcome, traveler</h1>
+<h2><%= @recipe.name %></h2>
+<h3><%= @recipe.ingredients %></h3>
+<h4><%= @recipe.cook_time %></h4>
+
+<br>
+
+<form method="post" action="/recipes/<%= @recipe.id %>">
+<input id="hidden" type="hidden" name="_method" value="delete">
+
+<input type="submit" value="delete"> ### value must be delete!
+
+</form>
